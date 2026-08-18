@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const ORIGIN = "https://www.mifiniquitolab.es";
+
 const NAV = `
       <nav>
         <a href="/">Todas</a>
@@ -51,7 +53,7 @@ function page(p) {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: p.title,
-    url: "https://mifiniquitolab.es" + p.path,
+    url: ORIGIN + p.path,
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
@@ -64,17 +66,36 @@ function page(p) {
   <script>(function(){if(location.hostname==="mikelzalacain.github.io")document.write('<base href="/finiquitolab/">');})();</script>
   <title>${p.title}</title>
   <meta name="description" content="${p.description}">
-  <link rel="canonical" href="https://mifiniquitolab.es${p.path}">
-  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="${ORIGIN}${p.path}">
+  <link rel="alternate" hreflang="es-ES" href="${ORIGIN}${p.path}">
+  <link rel="alternate" hreflang="x-default" href="${ORIGIN}${p.path}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#f4efe6">
   <meta property="og:title" content="${p.h1}">
   <meta property="og:description" content="${p.description}">
-  <meta property="og:url" content="https://mifiniquitolab.es${p.path}">
+  <meta property="og:url" content="${ORIGIN}${p.path}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="FiniquitoLab">
+  <meta property="og:image" content="${ORIGIN}/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${p.h1}">
+  <meta name="twitter:description" content="${p.description}">
+  <meta name="twitter:image" content="${ORIGIN}/img/og-cover.jpg">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/styles.css">
   <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
   <script type="application/ld+json">${JSON.stringify(appLd)}</script>
+  <script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: ORIGIN + "/" },
+      { "@type": "ListItem", position: 2, name: p.h1, item: ORIGIN + p.path },
+    ],
+  })}</script>
 </head>
 <body>
   <header class="site-header">
@@ -85,6 +106,7 @@ function page(p) {
   </header>
   <main class="wrap">
     <section class="hero">
+      <nav class="crumbs" aria-label="Migas de pan"><a href="/">Inicio</a><span aria-hidden="true"> / </span><span>${p.h1}</span></nav>
       <p class="kicker">${p.kicker}</p>
       <h1>${p.h1}</h1>
       <p class="lede">${p.lede}</p>
@@ -172,7 +194,7 @@ const indemnRun = (fn, label) => `
 const pages = [
   {
     path: "/calculadora-finiquito-2026/",
-    title: "Calculadora de finiquito 2026 | FiniquitoLab",
+    title: "Calculadora de finiquito 2026 gratis | España | FiniquitoLab",
     description:
       "Calcula tu finiquito en España 2026: baja voluntaria, despido objetivo, improcedente o fin de contrato temporal. Gratis y al instante.",
     kicker: "España · 2026",

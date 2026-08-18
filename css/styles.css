@@ -84,6 +84,14 @@ nav {
 nav a { text-decoration: none; color: var(--ink-soft); }
 nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
 
+.crumbs {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+.crumbs a { color: var(--moss); text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+
 .hero {
   padding: 48px 0 24px;
 }

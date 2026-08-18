@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://mifiniquitolab.es/sitemap.xml
+Disallow: /404.html
+
+Sitemap: https://www.mifiniquitolab.es/sitemap.xml
