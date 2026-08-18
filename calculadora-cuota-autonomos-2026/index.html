@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora cuota de autónomos 2026 | tramos RETA | MiFiniquito</title>
+  <meta name="description" content="Cuota de autónomos 2026 según rendimientos netos: tramos oficiales, base mínima y tipo aproximado 31,4%.">
+  <link rel="canonical" href="https://mifiniquito.es/calculadora-cuota-autonomos-2026/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Calculadora de cuota de autónomos 2026">
+  <meta property="og:description" content="Cuota de autónomos 2026 según rendimientos netos: tramos oficiales, base mínima y tipo aproximado 31,4%.">
+  <meta property="og:url" content="https://mifiniquito.es/calculadora-cuota-autonomos-2026/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto paga un autónomo en 2026?","acceptedAnswer":{"@type":"Answer","text":"Depende del tramo de ingresos. En la base mínima de cada tramo, la cuota ronda el 31,4% de esa base."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora cuota de autónomos 2026 | tramos RETA | MiFiniquito","url":"https://mifiniquito.es/calculadora-cuota-autonomos-2026/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">MF</span> MiFiniquito</a>
+      
+      <nav>
+        <a href="/">Todas</a>
+        <a href="/calculadora-finiquito-2026/">Finiquito</a>
+        <a href="/calculadora-sueldo-neto-2026/">Sueldo neto</a>
+        <a href="/calculadora-paro-2026/">Paro</a>
+        <a href="/calculadora-cuota-autonomos-2026/">Autónomos</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker">RETA · Orden PJC/297/2026</p>
+      <h1>Calculadora de cuota de autónomos 2026</h1>
+      <p class="lede">Pon tu rendimiento neto mensual. Usamos la base mínima del tramo y un tipo del 31,4% (contingencias + IT + cese + MEI, orientativo).</p>
+    </section>
+    <section class="grid-2" id="calculadora">
+      <form class="card calc" id="form">
+        <h2>Rendimiento</h2>
+        <div class="field"><label for="netMonthly">Rendimiento neto mensual (€)</label><input id="netMonthly" type="number" min="0" step="1" value="1500"></div>
+        <div class="field"><label for="base">Base de cotización (€) — déjalo vacío para la mínima del tramo</label><input id="base" type="number" min="0" step="0.01" placeholder="Mínima del tramo"></div>
+        <button class="btn" type="submit">Calcular</button>
+      </form>
+      <div class="card result" id="out" aria-live="polite"></div>
+    </section>
+    <section class="section prose"><p>Tablas de la Orden PJC/297/2026. Base máxima general 5.101,20 €. La tarifa plana y las bonificaciones no están en esta versión.</p>
+      <p>Si facturas por cuenta ajena a la vez, mira también el <a href="/calculadora-sueldo-neto-2026/">sueldo neto</a>.</p></section>
+    <section class="section faq"><h2>Preguntas frecuentes</h2>
+      <details><summary>¿Cuánto paga un autónomo en 2026?</summary><p>Depende del tramo de ingresos. En la base mínima de cada tramo, la cuota ronda el 31,4% de esa base.</p></details>
+    </section>
+    <section class="section prose"><h2>Otras calculadoras</h2><ul><li><a href="/calculadora-finiquito-2026/">Finiquito 2026</a></li><li><a href="/calculadora-finiquito-baja-voluntaria-2026/">Baja voluntaria</a></li><li><a href="/calculadora-indemnizacion-despido-objetivo-2026/">Despido objetivo</a></li><li><a href="/calculadora-indemnizacion-despido-improcedente-2026/">Despido improcedente</a></li><li><a href="/calculadora-fin-contrato-temporal-2026/">Contrato temporal</a></li><li><a href="/comparativa-despido-objetivo-improcedente/">20 vs 33 días</a></li><li><a href="/calculadora-vacaciones-no-disfrutadas/">Vacaciones</a></li><li><a href="/calculadora-sueldo-neto-2026/">Bruto a neto</a></li><li><a href="/calculadora-paro-2026/">Paro SEPE</a></li><li><a href="/calculadora-preaviso-despido/">Preaviso</a></li><li><a href="/calculadora-horas-extra-2026/">Horas extra</a></li></ul></section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>Estimación orientativa. No sustituye al SEPE, Hacienda ni a un laboralista.</div>
+      <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+    </div>
+  </footer>
+  <script src="/js/calc.js"></script>
+  <script src="/js/ui.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("form");
+      var out = document.getElementById("out");
+      function run() { 
+        var data = C.cuotaAutonomos({
+          netMonthly: document.getElementById("netMonthly").value,
+          base: document.getElementById("base").value
+        });
+        out.innerHTML = '<p class="kicker">Cuota mensual estimada</p><p class="total">' + C.euros(data.cuota) + '</p>' +
+          '<p class="muted">' + data.tramo.label + '</p>' +
+          '<ul class="breakdown">' +
+          '<li><span>Base usada</span><span>' + C.euros(data.base) + '</span></li>' +
+          '<li><span>Base mín / máx del tramo</span><span>' + C.euros(data.tramo.minBase) + ' – ' + C.euros(data.tramo.maxBase) + '</span></li>' +
+          '<li><span>Tipo aplicado</span><span>' + C.num(data.tipo * 100, 1) + '%</span></li>' +
+          '<li class="strong"><span>Cuota anual</span><span>' + C.euros(data.anual) + '</span></li></ul>'; }
+      bindForm(form, run);
+      run();
+    })();
+  </script>
+</body>
+</html>

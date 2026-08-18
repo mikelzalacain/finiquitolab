@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora sueldo neto 2026: bruto a neto España | MiFiniquito</title>
+  <meta name="description" content="Pasa tu salario bruto a neto en 2026: Seguridad Social (~6,5%) e IRPF estimado por tramos. SMI 1.221 € en 14 pagas.">
+  <link rel="canonical" href="https://mifiniquito.es/calculadora-sueldo-neto-2026/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Calculadora de sueldo neto 2026">
+  <meta property="og:description" content="Pasa tu salario bruto a neto en 2026: Seguridad Social (~6,5%) e IRPF estimado por tramos. SMI 1.221 € en 14 pagas.">
+  <meta property="og:url" content="https://mifiniquito.es/calculadora-sueldo-neto-2026/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Por qué no coincide con mi nómina?","acceptedAnswer":{"@type":"Answer","text":"La retención real usa el modelo 145, la comunidad y las pagas. Esto es una estimación rápida."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora sueldo neto 2026: bruto a neto España | MiFiniquito","url":"https://mifiniquito.es/calculadora-sueldo-neto-2026/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">MF</span> MiFiniquito</a>
+      
+      <nav>
+        <a href="/">Todas</a>
+        <a href="/calculadora-finiquito-2026/">Finiquito</a>
+        <a href="/calculadora-sueldo-neto-2026/">Sueldo neto</a>
+        <a href="/calculadora-paro-2026/">Paro</a>
+        <a href="/calculadora-cuota-autonomos-2026/">Autónomos</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker">Bruto → neto · 2026</p>
+      <h1>Calculadora de sueldo neto 2026</h1>
+      <p class="lede">Del bruto anual restamos cotización del trabajador e IRPF orientativo. El SMI (17.094 €) se trata como sin retención.</p>
+    </section>
+    <section class="grid-2" id="calculadora">
+      <form class="card calc" id="form">
+        <h2>Tu salario</h2>
+        <div class="row">
+          <div class="field"><label for="monthly">Bruto mensual (€)</label><input id="monthly" type="number" min="0" step="0.01" value="2000"></div>
+          <div class="field"><label for="pagas">Pagas</label>
+            <select id="pagas"><option value="12">12</option><option value="14" selected>14</option><option value="15">15</option></select>
+          </div>
+        </div>
+        <label class="check field"><input id="temporal" type="checkbox"><span>Contrato temporal (desempleo 1,60% en vez de 1,55%).</span></label>
+        <button class="btn" type="submit">Calcular</button>
+      </form>
+      <div class="card result" id="out" aria-live="polite"></div>
+    </section>
+    <section class="section prose"><h2>Qué se resta</h2>
+      <p>El trabajador cotiza alrededor del <strong>6,50%</strong> (4,70% contingencias comunes + desempleo + FP + MEI 0,15% en 2026). El IRPF de esta página usa tramos estatales orientativos y un mínimo personal de 5.550 €. No reproduce el algoritmo de retenciones de la AEAT (hijos, discapacidad, CCAA).</p>
+      <div class="example">SMI 2026: 1.221 € × 14 = 17.094 €/año (RD 126/2026).</div></section>
+    <section class="section faq"><h2>Preguntas frecuentes</h2>
+      <details><summary>¿Por qué no coincide con mi nómina?</summary><p>La retención real usa el modelo 145, la comunidad y las pagas. Esto es una estimación rápida.</p></details>
+    </section>
+    <section class="section prose"><h2>Otras calculadoras</h2><ul><li><a href="/calculadora-finiquito-2026/">Finiquito 2026</a></li><li><a href="/calculadora-finiquito-baja-voluntaria-2026/">Baja voluntaria</a></li><li><a href="/calculadora-indemnizacion-despido-objetivo-2026/">Despido objetivo</a></li><li><a href="/calculadora-indemnizacion-despido-improcedente-2026/">Despido improcedente</a></li><li><a href="/calculadora-fin-contrato-temporal-2026/">Contrato temporal</a></li><li><a href="/comparativa-despido-objetivo-improcedente/">20 vs 33 días</a></li><li><a href="/calculadora-vacaciones-no-disfrutadas/">Vacaciones</a></li><li><a href="/calculadora-paro-2026/">Paro SEPE</a></li><li><a href="/calculadora-preaviso-despido/">Preaviso</a></li><li><a href="/calculadora-horas-extra-2026/">Horas extra</a></li><li><a href="/calculadora-cuota-autonomos-2026/">Autónomos</a></li></ul></section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>Estimación orientativa. No sustituye al SEPE, Hacienda ni a un laboralista.</div>
+      <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+    </div>
+  </footer>
+  <script src="/js/calc.js"></script>
+  <script src="/js/ui.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("form");
+      var out = document.getElementById("out");
+      function run() { 
+        var data = C.sueldoNeto({
+          monthly: document.getElementById("monthly").value,
+          pagas: document.getElementById("pagas").value,
+          temporal: document.getElementById("temporal").checked
+        });
+        out.innerHTML = '<p class="kicker">Neto por paga</p><p class="total">' + C.euros(data.netoPaga) + '</p>' +
+          '<p class="muted">Neto anual ' + C.euros(data.netoAnnual) + (data.smiExempt ? ' · IRPF 0 € (SMI o inferior)' : '') + '</p>' +
+          '<ul class="breakdown">' +
+          '<li><span>Bruto anual</span><span>' + C.euros(data.annual) + '</span></li>' +
+          '<li><span>Seguridad Social (' + C.num(data.ssRate * 100, 2) + '%)</span><span>' + C.euros(data.ssAnnual) + '</span></li>' +
+          '<li><span>IRPF estimado</span><span>' + C.euros(data.irpfAnnual) + '</span></li>' +
+          '<li class="strong"><span>Neto anual</span><span>' + C.euros(data.netoAnnual) + '</span></li></ul>'; }
+      bindForm(form, run);
+      run();
+    })();
+  </script>
+</body>
+</html>

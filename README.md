@@ -1,6 +1,6 @@
 # MiFiniquito
 
-Sitio estático de calculadoras laborales para España (2026):
+Sitio estático de calculadoras laborales para España (2026): finiquito, despidos, paro, sueldo neto, autónomos, vacaciones, preaviso y horas extra.
 
 - [Finiquito por baja voluntaria](calculadora-finiquito-baja-voluntaria-2026/)
 - [Indemnización por despido objetivo](calculadora-indemnizacion-despido-objetivo-2026/)

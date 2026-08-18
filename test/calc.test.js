@@ -71,4 +71,26 @@ assert.strictEqual(C.daysInclusive(new Date(2026, 0, 1), new Date(2026, 7, 18)),
 close(vac.generated, (30 * 230) / 365);
 close(vac.pending, vac.generated - 10);
 
+const imp = C.despidoImprocedente({
+  monthly: 1800, pagas: 14, start: "2021-03-01", end: "2026-06-18",
+  daysWorked: 18, unusedVacation: 8, monthsExtras: 6, extrasInMonthly: false
+});
+close(imp.indemnizacion, daily * 33 * (64 / 12));
+
+const paro = C.paro({ base: 1800, daysQuoted: 1080, hijos: 0 });
+assert.strictEqual(paro.durationDays, 360);
+close(paro.firstRaw, 1260);
+close(paro.first, 1225);
+
+const auto = C.cuotaAutonomos({ netMonthly: 1500 });
+close(auto.tramo.minBase, 960.78);
+close(auto.cuota, 960.78 * 0.314);
+
+const neto = C.sueldoNeto({ monthly: 1221, pagas: 14 });
+assert.strictEqual(neto.smiExempt, true);
+assert.strictEqual(neto.irpfAnnual, 0);
+
+const extra = C.horasExtra({ monthly: 1600, pagas: 14, hours: 10, multiplier: 1.75, yearlyHours: 1826 });
+close(extra.hourly, (1600 * 14) / 1826);
+
 console.log("OK " + module.filename);

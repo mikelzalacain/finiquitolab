@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de preaviso de despido | 15 días | MiFiniquito</title>
+  <meta name="description" content="Calcula el pago de preaviso si la empresa no te avisa con 15 días en un despido objetivo.">
+  <link rel="canonical" href="https://mifiniquito.es/calculadora-preaviso-despido/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Calculadora de preaviso de despido">
+  <meta property="og:description" content="Calcula el pago de preaviso si la empresa no te avisa con 15 días en un despido objetivo.">
+  <meta property="og:url" content="https://mifiniquito.es/calculadora-preaviso-despido/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿La baja voluntaria también?","acceptedAnswer":{"@type":"Answer","text":"El convenio puede pedirte 15 días a ti. Si no preavisas, la empresa a veces descuenta esos días del finiquito."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de preaviso de despido | 15 días | MiFiniquito","url":"https://mifiniquito.es/calculadora-preaviso-despido/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">MF</span> MiFiniquito</a>
+      
+      <nav>
+        <a href="/">Todas</a>
+        <a href="/calculadora-finiquito-2026/">Finiquito</a>
+        <a href="/calculadora-sueldo-neto-2026/">Sueldo neto</a>
+        <a href="/calculadora-paro-2026/">Paro</a>
+        <a href="/calculadora-cuota-autonomos-2026/">Autónomos</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker">15 días</p>
+      <h1>Calculadora de preaviso de despido</h1>
+      <p class="lede">En despido objetivo la empresa debe preavisar 15 días o pagarlos. Aquí sale el importe.</p>
+    </section>
+    <section class="grid-2" id="calculadora">
+      <form class="card calc" id="form">
+        <h2>Datos</h2>
+        <div class="row">
+          <div class="field"><label for="monthly">Bruto mensual (€)</label><input id="monthly" type="number" value="1800"></div>
+          <div class="field"><label for="days">Días de preaviso no cumplidos</label><input id="days" type="number" min="0" max="15" value="15"></div>
+        </div>
+        <button class="btn" type="submit">Calcular</button>
+      </form>
+      <div class="card result" id="out" aria-live="polite"></div>
+    </section>
+    <section class="section prose"><p>El salario día para este pago suele ser mensual ÷ 30. Si no te preavisaron nada, reclama 15 días además del <a href="/calculadora-indemnizacion-despido-objetivo-2026/">finiquito y la indemnización</a>.</p></section>
+    <section class="section faq"><h2>Preguntas frecuentes</h2>
+      <details><summary>¿La baja voluntaria también?</summary><p>El convenio puede pedirte 15 días a ti. Si no preavisas, la empresa a veces descuenta esos días del finiquito.</p></details>
+    </section>
+    <section class="section prose"><h2>Otras calculadoras</h2><ul><li><a href="/calculadora-finiquito-2026/">Finiquito 2026</a></li><li><a href="/calculadora-finiquito-baja-voluntaria-2026/">Baja voluntaria</a></li><li><a href="/calculadora-indemnizacion-despido-objetivo-2026/">Despido objetivo</a></li><li><a href="/calculadora-indemnizacion-despido-improcedente-2026/">Despido improcedente</a></li><li><a href="/calculadora-fin-contrato-temporal-2026/">Contrato temporal</a></li><li><a href="/comparativa-despido-objetivo-improcedente/">20 vs 33 días</a></li><li><a href="/calculadora-vacaciones-no-disfrutadas/">Vacaciones</a></li><li><a href="/calculadora-sueldo-neto-2026/">Bruto a neto</a></li><li><a href="/calculadora-paro-2026/">Paro SEPE</a></li><li><a href="/calculadora-horas-extra-2026/">Horas extra</a></li><li><a href="/calculadora-cuota-autonomos-2026/">Autónomos</a></li></ul></section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>Estimación orientativa. No sustituye al SEPE, Hacienda ni a un laboralista.</div>
+      <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+    </div>
+  </footer>
+  <script src="/js/calc.js"></script>
+  <script src="/js/ui.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("form");
+      var out = document.getElementById("out");
+      function run() { 
+        var data = C.preaviso({ monthly: document.getElementById("monthly").value, days: document.getElementById("days").value });
+        out.innerHTML = '<p class="kicker">Importe del preaviso</p><p class="total">' + C.euros(data.amount) + '</p>' +
+          '<p class="muted">' + data.days + ' días × ' + C.euros(data.daily) + '</p>'; }
+      bindForm(form, run);
+      run();
+    })();
+  </script>
+</body>
+</html>
