@@ -51,7 +51,7 @@ function page(p) {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: p.title,
-    url: "https://mifiniquito.es" + p.path,
+    url: "https://finiquitolab.es" + p.path,
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
@@ -63,11 +63,11 @@ function page(p) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${p.title}</title>
   <meta name="description" content="${p.description}">
-  <link rel="canonical" href="https://mifiniquito.es${p.path}">
+  <link rel="canonical" href="https://finiquitolab.es${p.path}">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="${p.h1}">
   <meta property="og:description" content="${p.description}">
-  <meta property="og:url" content="https://mifiniquito.es${p.path}">
+  <meta property="og:url" content="https://finiquitolab.es${p.path}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
@@ -78,7 +78,7 @@ function page(p) {
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/"><span class="brand-mark">MF</span> MiFiniquito</a>
+      <a class="brand" href="/"><span class="brand-mark">FL</span> FiniquitoLab</a>
       ${NAV}
     </div>
   </header>
@@ -171,7 +171,7 @@ const indemnRun = (fn, label) => `
 const pages = [
   {
     path: "/calculadora-finiquito-2026/",
-    title: "Calculadora de finiquito 2026 | MiFiniquito",
+    title: "Calculadora de finiquito 2026 | FiniquitoLab",
     description:
       "Calcula tu finiquito en España 2026: baja voluntaria, despido objetivo, improcedente o fin de contrato temporal. Gratis y al instante.",
     kicker: "España · 2026",
@@ -226,7 +226,7 @@ const pages = [
   },
   {
     path: "/calculadora-indemnizacion-despido-improcedente-2026/",
-    title: "Calculadora indemnización despido improcedente 2026 | MiFiniquito",
+    title: "Calculadora indemnización despido improcedente 2026 | FiniquitoLab",
     description:
       "Indemnización por despido improcedente en España 2026: 33 días de salario por año, tope 24 mensualidades y prorrateo por meses.",
     kicker: "Art. 56.1 ET · 33 días / año",
@@ -243,7 +243,7 @@ const pages = [
   },
   {
     path: "/calculadora-fin-contrato-temporal-2026/",
-    title: "Calculadora fin de contrato temporal 2026 | MiFiniquito",
+    title: "Calculadora fin de contrato temporal 2026 | FiniquitoLab",
     description:
       "Indemnización por fin de contrato temporal en España 2026: 12 días de salario por año trabajado, más el finiquito.",
     kicker: "12 días / año",
@@ -291,7 +291,7 @@ const pages = [
   },
   {
     path: "/calculadora-sueldo-neto-2026/",
-    title: "Calculadora sueldo neto 2026: bruto a neto España | MiFiniquito",
+    title: "Calculadora sueldo neto 2026: bruto a neto España | FiniquitoLab",
     description:
       "Pasa tu salario bruto a neto en 2026: Seguridad Social (~6,5%) e IRPF estimado por tramos. SMI 1.221 € en 14 pagas.",
     kicker: "Bruto → neto · 2026",
@@ -328,7 +328,7 @@ const pages = [
   },
   {
     path: "/calculadora-paro-2026/",
-    title: "Calculadora de paro 2026: cuánto cobras y cuánto dura | MiFiniquito",
+    title: "Calculadora de paro 2026: cuánto cobras y cuánto dura | FiniquitoLab",
     description:
       "Calcula la prestación por desempleo 2026: 70% los primeros 180 días, 60% después, topes IPREM y duración según días cotizados.",
     kicker: "SEPE · 70% / 60%",
@@ -370,7 +370,7 @@ const pages = [
   },
   {
     path: "/calculadora-preaviso-despido/",
-    title: "Calculadora de preaviso de despido | 15 días | MiFiniquito",
+    title: "Calculadora de preaviso de despido | 15 días | FiniquitoLab",
     description:
       "Calcula el pago de preaviso si la empresa no te avisa con 15 días en un despido objetivo.",
     kicker: "15 días",
@@ -391,7 +391,7 @@ const pages = [
   },
   {
     path: "/calculadora-horas-extra-2026/",
-    title: "Calculadora de horas extra 2026 | MiFiniquito",
+    title: "Calculadora de horas extra 2026 | FiniquitoLab",
     description:
       "Calcula el valor de las horas extraordinarias: salario hora y recargo (por defecto 175%, según convenio).",
     kicker: "Art. 35 ET",
@@ -422,7 +422,7 @@ const pages = [
   },
   {
     path: "/calculadora-cuota-autonomos-2026/",
-    title: "Calculadora cuota de autónomos 2026 | tramos RETA | MiFiniquito",
+    title: "Calculadora cuota de autónomos 2026 | tramos RETA | FiniquitoLab",
     description:
       "Cuota de autónomos 2026 según rendimientos netos: tramos oficiales, base mínima y tipo aproximado 31,4%.",
     kicker: "RETA · Orden PJC/297/2026",
