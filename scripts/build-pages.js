@@ -61,6 +61,7 @@ function page(p) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){if(location.hostname==="mikelzalacain.github.io")document.write('<base href="/finiquitolab/">');})();</script>
   <title>${p.title}</title>
   <meta name="description" content="${p.description}">
   <link rel="canonical" href="https://finiquitolab.es${p.path}">

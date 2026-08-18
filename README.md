@@ -2,7 +2,11 @@
 
 Calculadoras laborales para España (2026): finiquito, despidos, paro, sueldo neto, autónomos, vacaciones, preaviso y horas extra. El cálculo corre en el navegador.
 
-Dominio previsto: **https://finiquitolab.es**
+- Repositorio: **https://github.com/mikelzalacain/finiquitolab**
+- Vista previa: **https://mikelzalacain.github.io/finiquitolab/**
+- Dominio previsto: **https://finiquitolab.es**
+
+En Cursor del PC: **Clone repo** → pega `https://github.com/mikelzalacain/finiquitolab.git`
 
 ## Local
 
