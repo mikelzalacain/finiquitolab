@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de indemnización por despido objetivo 2026 | MiFiniquito</title>
+  <meta name="description" content="Calcula la indemnización por despido objetivo en España 2026: 20 días de salario por año, tope de 12 mensualidades y prorrateo por meses. Plus finiquito.">
+  <link rel="canonical" href="https://mifiniquito.es/calculadora-indemnizacion-despido-objetivo-2026/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Calculadora de indemnización por despido objetivo 2026">
+  <meta property="og:description" content="20 días por año, máximo 12 mensualidades. Prorrateo por meses según el Tribunal Supremo.">
+  <meta property="og:url" content="https://mifiniquito.es/calculadora-indemnizacion-despido-objetivo-2026/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto es la indemnización por despido objetivo en 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "20 días de salario por año trabajado, prorrateando por meses los periodos inferiores a un año, con un máximo de 12 mensualidades (art. 53.1.b ET)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se calcula el salario día?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Salario bruto anual con pagas extras, dividido entre 365. Ejemplo: 1.500 € × 14 / 365 ≈ 57,53 €/día."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La indemnización por despido objetivo paga IRPF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Está exenta hasta el límite legal (20 días/año con tope de 12 mensualidades) y hasta 180.000 €. El finiquito salarial sí tributa."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de indemnización por despido objetivo 2026",
+    "url": "https://mifiniquito.es/calculadora-indemnizacion-despido-objetivo-2026/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">MF</span> MiFiniquito</a>
+      <nav>
+        <a href="/calculadora-finiquito-baja-voluntaria-2026/">Finiquito</a>
+        <a href="/calculadora-indemnizacion-despido-objetivo-2026/" aria-current="page">Despido objetivo</a>
+        <a href="/calculadora-vacaciones-no-disfrutadas/">Vacaciones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker">Art. 53.1.b ET · 20 días / año</p>
+      <h1>Calculadora de indemnización por despido objetivo 2026</h1>
+      <p class="lede">20 días de salario por año de servicio, tope de 12 mensualidades. Los días sueltos cuentan como un mes más, como dice el Tribunal Supremo.</p>
+    </section>
+
+    <section class="grid-2" id="calculadora">
+      <form class="card calc" id="form">
+        <h2>Tus datos</h2>
+        <div class="row">
+          <div class="field">
+            <label for="monthly">Salario bruto mensual (€)</label>
+            <input id="monthly" type="number" min="0" step="0.01" value="1800" required>
+          </div>
+          <div class="field">
+            <label for="pagas">Pagas al año</label>
+            <select id="pagas">
+              <option value="12">12 pagas</option>
+              <option value="14" selected>14 pagas</option>
+              <option value="15">15 pagas</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="start">Fecha de alta</label>
+            <input id="start" type="date" value="2021-03-01" required>
+          </div>
+          <div class="field">
+            <label for="end">Fecha de despido</label>
+            <input id="end" type="date" value="2026-06-18" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="daysWorked">Días trabajados del mes del cese</label>
+            <input id="daysWorked" type="number" min="0" max="31" value="18">
+          </div>
+          <div class="field">
+            <label for="unusedVacation">Vacaciones pendientes (días)</label>
+            <input id="unusedVacation" type="number" min="0" step="0.5" value="8">
+          </div>
+        </div>
+        <div class="field">
+          <label for="monthsExtras">Meses de pagas extras generados (si no van prorrateadas)</label>
+          <input id="monthsExtras" type="number" min="0" max="12" value="6">
+        </div>
+        <label class="check field">
+          <input id="extrasInMonthly" type="checkbox">
+          <span>Las pagas extras ya van prorrateadas en la nómina mensual.</span>
+        </label>
+        <button class="btn" type="submit">Calcular indemnización</button>
+      </form>
+
+      <div class="card result" id="out" aria-live="polite"></div>
+    </section>
+
+    <section class="section prose">
+      <h2>Fórmula del despido objetivo</h2>
+      <p>El despido objetivo (causas económicas, técnicas, organizativas o de producción, entre otras) lleva indemnización de <strong>20 días de salario por año</strong>, con un máximo de <strong>12 mensualidades</strong> (art. 53.1.b del Estatuto de los Trabajadores).</p>
+      <ul>
+        <li>Salario día = bruto anual (nómina × pagas) ÷ 365.</li>
+        <li>Antigüedad en meses: los días que sobran tras el último mes completo se cuentan como un mes entero (STS 12-11-2007 y doctrina posterior).</li>
+        <li>Indemnización = salario día × 20 × (meses / 12), sin pasar del tope.</li>
+      </ul>
+      <div class="example">
+        <strong>Ejemplo.</strong> 1.800 € × 14 pagas = 25.200 €/año → 69,04 €/día. Alta 1-3-2021 y cese 18-6-2026: 5 años, 3 meses y días sueltos, que el Supremo cuenta como un mes más (64 meses = 5,33 años). Indemnización ≈ 20 × 5,33 × 69,04 € ≈ <strong>7.364 €</strong>, más el finiquito del mes y las vacaciones.
+      </div>
+      <p>Si el despido acaba declarado improcedente, la regla pasa a 33 días/año y tope de 24 mensualidades (art. 56.1 ET). Esta página no cubre ese caso.</p>
+      <p>Además del finiquito, la empresa debe preavisar 15 días o pagarlos. Revisa si te los han incluido.</p>
+    </section>
+
+    <section class="section faq">
+      <h2>Preguntas frecuentes</h2>
+      <details open>
+        <summary>¿Cuánto es la indemnización por despido objetivo en 2026?</summary>
+        <p>20 días por año, prorrateo por meses, máximo 12 mensualidades. No ha cambiado respecto a años anteriores.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se calcula el salario día?</summary>
+        <p>Bruto anual con pagas extras, entre 365. Los pluses salariales consolidados también entran; esta herramienta usa el bruto mensual que indiques × pagas.</p>
+      </details>
+      <details>
+        <summary>¿La indemnización paga IRPF?</summary>
+        <p>La parte que no supera el límite legal está exenta, con un tope absoluto de 180.000 €. El salario, las vacaciones y las pagas extras del finiquito sí tributan. Mira también la <a href="/calculadora-finiquito-baja-voluntaria-2026/">calculadora de finiquito</a> si lo que te dan es una dimisión, no un despido.</p>
+      </details>
+      <details>
+        <summary>¿Y si el contrato es anterior al 12 de febrero de 2012?</summary>
+        <p>En despido improcedente hay tramo de 45 días. En objetivo procedente se aplica 20 días. Si tu caso es mixto, consulta a un laboralista: esta calculadora usa solo 20 días.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>Estimación orientativa. El juez o el convenio pueden fijar otra cifra.</div>
+      <div>
+        <a href="/aviso-legal.html">Aviso legal</a> ·
+        <a href="/privacidad.html">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/calc.js"></script>
+  <script src="/js/ui.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("form");
+      var out = document.getElementById("out");
+      function run() {
+        var pagas = Number(document.getElementById("pagas").value);
+        var data = C.despidoObjetivo({
+          monthly: document.getElementById("monthly").value,
+          pagas: pagas,
+          start: document.getElementById("start").value,
+          end: document.getElementById("end").value,
+          daysWorked: document.getElementById("daysWorked").value,
+          unusedVacation: document.getElementById("unusedVacation").value,
+          monthsExtras: document.getElementById("monthsExtras").value,
+          extrasInMonthly: document.getElementById("extrasInMonthly").checked || pagas === 12
+        });
+        if (data.error) return renderError(out, data.error);
+        var d = data.indemnizacionDetalle;
+        out.innerHTML =
+          '<p class="kicker">Indemnización + finiquito</p>' +
+          '<p class="total">' + C.euros(data.totalConIndemnizacion) + '</p>' +
+          '<p class="muted">Indemnización ' + C.euros(data.indemnizacion) + ' (exenta hasta el límite legal) + finiquito salarial ' + C.euros(data.total) + '.</p>' +
+          '<ul class="breakdown">' +
+          '<li><span>Antigüedad computable</span><span>' + d.months + ' meses (' + C.num(d.yearsFraction, 2) + ' años)</span></li>' +
+          '<li><span>Salario día (anual / 365)</span><span>' + C.euros(d.daily) + '</span></li>' +
+          '<li><span>Indemnización 20 días/año</span><span>' + C.euros(d.raw) + '</span></li>' +
+          '<li><span>Tope 12 mensualidades</span><span>' + C.euros(d.cap) + (d.capped ? ' · aplicado' : '') + '</span></li>' +
+          '<li><span>Salario pendiente</span><span>' + C.euros(data.salarioPendiente) + '</span></li>' +
+          '<li><span>Vacaciones</span><span>' + C.euros(data.vacaciones) + '</span></li>' +
+          '<li><span>Pagas extras</span><span>' + C.euros(data.pagasExtra) + '</span></li>' +
+          '<li class="strong"><span>Total a percibir (bruto)</span><span>' + C.euros(data.totalConIndemnizacion) + '</span></li>' +
+          '</ul>' +
+          '<p class="note">Si no te han preavisado 15 días, reclama su abono aparte. Para solo vacaciones usa la <a href="/calculadora-vacaciones-no-disfrutadas/">calculadora de vacaciones no disfrutadas</a>.</p>';
+      }
+      bindForm(form, run);
+      run();
+    })();
+  </script>
+</body>
+</html>

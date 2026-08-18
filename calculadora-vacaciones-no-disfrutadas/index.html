@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de vacaciones no disfrutadas | MiFiniquito</title>
+  <meta name="description" content="Calcula las vacaciones no disfrutadas en España: 30 días naturales al año, días generados y cuánto te pagan en el finiquito. Gratis, 2026.">
+  <link rel="canonical" href="https://mifiniquito.es/calculadora-vacaciones-no-disfrutadas/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Calculadora de vacaciones no disfrutadas">
+  <meta property="og:description" content="Cuántos días te quedan y a cuánto se pagan al cesar. Art. 38 del Estatuto de los Trabajadores.">
+  <meta property="og:url" content="https://mifiniquito.es/calculadora-vacaciones-no-disfrutadas/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántos días de vacaciones corresponden por ley en España?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un mínimo de 30 días naturales al año (art. 38.1 ET), unos 22 días laborables. El convenio puede mejorar esa cifra, nunca recortarla."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Me tienen que pagar las vacaciones si no las he cogido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, cuando termina el contrato. El abono en metálico de vacaciones no disfrutadas solo procede al cesar, no para canjear descanso durante la relación laboral."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de vacaciones no disfrutadas",
+    "url": "https://mifiniquito.es/calculadora-vacaciones-no-disfrutadas/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">MF</span> MiFiniquito</a>
+      <nav>
+        <a href="/calculadora-finiquito-baja-voluntaria-2026/">Finiquito</a>
+        <a href="/calculadora-indemnizacion-despido-objetivo-2026/">Despido objetivo</a>
+        <a href="/calculadora-vacaciones-no-disfrutadas/" aria-current="page">Vacaciones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker">Art. 38 ET · 30 días naturales</p>
+      <h1>Calculadora de vacaciones no disfrutadas</h1>
+      <p class="lede">Cuántos días has generado este año, cuántos te quedan y a cuánto se pagan si sales de la empresa sin haberlos cogido.</p>
+    </section>
+
+    <section class="grid-2" id="calculadora">
+      <form class="card calc" id="form">
+        <h2>Tus datos</h2>
+        <div class="field">
+          <label for="monthly">Salario bruto mensual (€)</label>
+          <input id="monthly" type="number" min="0" step="0.01" value="1600" required>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="annualDays">Días de vacaciones al año</label>
+            <input id="annualDays" type="number" min="1" step="1" value="30">
+          </div>
+          <div class="field">
+            <label for="taken">Días ya disfrutados este año</label>
+            <input id="taken" type="number" min="0" step="0.5" value="10">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="start">Alta (o 1 de enero si llevas más de un año)</label>
+            <input id="start" type="date" value="2025-09-01" required>
+          </div>
+          <div class="field">
+            <label for="end">Fecha de cese o de hoy</label>
+            <input id="end" type="date" value="2026-08-18" required>
+          </div>
+        </div>
+        <p class="note">Si tu convenio da más de 30 días naturales, súbelos. Por debajo de 30 el campo no deja bajar: es el mínimo legal.</p>
+        <button class="btn" type="submit">Calcular vacaciones</button>
+      </form>
+      <div class="card result" id="out" aria-live="polite"></div>
+    </section>
+
+    <section class="section prose">
+      <h2>Cómo se generan las vacaciones</h2>
+      <p>El artículo 38.1 ET fija <strong>30 días naturales</strong> por año trabajado. Si entras o sales a mitad de año, se prorratean:</p>
+      <p>Días generados = 30 × días trabajados en el año ÷ 365.</p>
+      <p>Atajo habitual: <strong>2,5 días naturales por mes completo</strong>. Esta calculadora usa la prorrata por días naturales del año, más precisa en ceses a mitad de mes.</p>
+      <div class="example">
+        <strong>Ejemplo.</strong> Alta 1 de septiembre de 2025, cese 18 de agosto de 2026, 10 días ya cogidos, 1.600 €/mes. En 2026 has trabajado desde el 1 de enero. Días generados ≈ 30 × 230 ÷ 365 ≈ 18,9. Pendientes ≈ 8,9 días × (1.600 / 30) ≈ <strong>475 €</strong>.
+      </div>
+      <p>Durante el contrato no puedes canjear vacaciones por dinero. Solo se pagan al finalizar la relación laboral. Si te vas, mételas en la <a href="/calculadora-finiquito-baja-voluntaria-2026/">calculadora de finiquito por baja voluntaria</a>.</p>
+    </section>
+
+    <section class="section faq">
+      <h2>Preguntas frecuentes</h2>
+      <details open>
+        <summary>¿Cuántos días de vacaciones corresponden por ley?</summary>
+        <p>30 días naturales al año, unos 22 laborables. El convenio puede mejorar, no recortar.</p>
+      </details>
+      <details>
+        <summary>¿Me las tienen que pagar si no las he cogido?</summary>
+        <p>Sí, al terminar el contrato. No es un plus que puedas pedir cada mes mientras sigues trabajando.</p>
+      </details>
+      <details>
+        <summary>¿Son días naturales o laborables?</summary>
+        <p>La ley habla de días naturales. Si tu convenio usa laborables, indica aquí el equivalente anual (por ejemplo 23 o 24) para no quedarte corto.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>Estimación orientativa. El convenio puede ampliar los días.</div>
+      <div>
+        <a href="/aviso-legal.html">Aviso legal</a> ·
+        <a href="/privacidad.html">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/calc.js"></script>
+  <script src="/js/ui.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("form");
+      var out = document.getElementById("out");
+      function run() {
+        var data = C.vacacionesNoDisfrutadas({
+          monthly: document.getElementById("monthly").value,
+          annualDays: document.getElementById("annualDays").value,
+          taken: document.getElementById("taken").value,
+          start: document.getElementById("start").value,
+          end: document.getElementById("end").value
+        });
+        if (data.error) return renderError(out, data.error);
+        out.innerHTML =
+          '<p class="kicker">Importe bruto estimado</p>' +
+          '<p class="total">' + C.euros(data.amount) + '</p>' +
+          '<p class="muted">' + C.num(data.pending, 2) + ' días pendientes × ' + C.euros(data.perDay) + ' / día.</p>' +
+          '<ul class="breakdown">' +
+          '<li><span>Días generados en el periodo</span><span>' + C.num(data.generated, 2) + '</span></li>' +
+          '<li><span>Ya disfrutados</span><span>' + C.num(data.taken, 1) + '</span></li>' +
+          '<li class="strong"><span>Pendientes de pagar</span><span>' + C.num(data.pending, 2) + ' días</span></li>' +
+          '</ul>' +
+          '<p class="note">Si te despiden, suma esto al resto del finiquito y mira la <a href="/calculadora-indemnizacion-despido-objetivo-2026/">indemnización por despido objetivo</a>.</p>';
+      }
+      bindForm(form, run);
+      run();
+    })();
+  </script>
+</body>
+</html>

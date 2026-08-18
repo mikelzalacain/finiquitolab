@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de finiquito por baja voluntaria 2026 | MiFiniquito</title>
+  <meta name="description" content="Calcula tu finiquito por baja voluntaria en España 2026: salario pendiente, vacaciones no disfrutadas y pagas extras. Sin indemnización. Gratis y sin registro.">
+  <link rel="canonical" href="https://mifiniquito.es/calculadora-finiquito-baja-voluntaria-2026/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Calculadora de finiquito por baja voluntaria 2026">
+  <meta property="og:description" content="Salario del mes, vacaciones y pagas extras. Actualizada al Estatuto de los Trabajadores.">
+  <meta property="og:url" content="https://mifiniquito.es/calculadora-finiquito-baja-voluntaria-2026/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Hay indemnización si pido la baja voluntaria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. En una dimisión el finiquito cubre lo ya trabajado y no cobrado: salario, vacaciones y pagas extras. No hay indemnización por despido."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué entra en el finiquito de una baja voluntaria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El salario de los días del mes en curso, las vacaciones generadas y no disfrutadas (art. 38 ET) y la parte proporcional de pagas extras si no las cobras prorrateadas (art. 31 ET)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿El finiquito tributa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. El finiquito salarial tributa como rendimiento del trabajo. La indemnización legal por despido, que aquí no aplica, está exenta hasta el límite legal y 180.000 €."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de finiquito por baja voluntaria 2026",
+    "url": "https://mifiniquito.es/calculadora-finiquito-baja-voluntaria-2026/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "inLanguage": "es-ES"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">MF</span> MiFiniquito</a>
+      <nav>
+        <a href="/calculadora-finiquito-baja-voluntaria-2026/" aria-current="page">Finiquito</a>
+        <a href="/calculadora-indemnizacion-despido-objetivo-2026/">Despido objetivo</a>
+        <a href="/calculadora-vacaciones-no-disfrutadas/">Vacaciones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker">Baja voluntaria · España 2026</p>
+      <h1>Calculadora de finiquito por baja voluntaria 2026</h1>
+      <p class="lede">Introduce tu sueldo y las fechas. Verás el desglose de salario pendiente, vacaciones y pagas extras. En una dimisión no hay indemnización.</p>
+    </section>
+
+    <section class="grid-2" id="calculadora">
+      <form class="card calc" id="form" novalidate>
+        <h2>Tus datos</h2>
+        <div class="row">
+          <div class="field">
+            <label for="monthly">Salario bruto mensual (€)</label>
+            <input id="monthly" name="monthly" type="number" min="0" step="0.01" value="1500" required>
+          </div>
+          <div class="field">
+            <label for="pagas">Pagas al año</label>
+            <select id="pagas" name="pagas">
+              <option value="12">12 pagas (extras prorrateadas)</option>
+              <option value="14" selected>14 pagas</option>
+              <option value="15">15 pagas</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="start">Fecha de alta</label>
+            <input id="start" name="start" type="date" value="2024-01-15" required>
+          </div>
+          <div class="field">
+            <label for="end">Fecha de cese</label>
+            <input id="end" name="end" type="date" value="2026-04-10" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="daysWorked">Días trabajados del mes del cese</label>
+            <input id="daysWorked" name="daysWorked" type="number" min="0" max="31" value="10" required>
+          </div>
+          <div class="field">
+            <label for="unusedVacation">Días de vacaciones pendientes</label>
+            <input id="unusedVacation" name="unusedVacation" type="number" min="0" step="0.5" value="5" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="monthsExtras">Meses de pagas extras generados este año (si no van en la nómina)</label>
+          <input id="monthsExtras" name="monthsExtras" type="number" min="0" max="12" value="4">
+        </div>
+        <label class="check field">
+          <input id="extrasInMonthly" name="extrasInMonthly" type="checkbox">
+          <span>Ya cobro las pagas extras prorrateadas cada mes (no sumar extras aparte).</span>
+        </label>
+        <button class="btn" type="submit">Calcular finiquito</button>
+      </form>
+
+      <div class="card result" id="out" aria-live="polite">
+        <p class="kicker">Estimación bruta</p>
+        <p class="muted">Pulsa calcular o cambia un dato. El resultado sale aquí.</p>
+      </div>
+    </section>
+
+    <section class="section prose">
+      <h2>Cómo se calcula el finiquito si te vas tú</h2>
+      <p>La baja voluntaria extingue el contrato por tu decisión. La empresa debe liquidar lo que ya has generado (art. 49.2 del Estatuto de los Trabajadores). No te paga indemnización de despido.</p>
+      <ul>
+        <li><strong>Salario pendiente:</strong> sueldo mensual ÷ 30 × días trabajados en el mes del cese.</li>
+        <li><strong>Vacaciones no disfrutadas:</strong> sueldo mensual ÷ 30 × días pendientes. El mínimo legal son 30 días naturales al año (art. 38 ET).</li>
+        <li><strong>Pagas extras:</strong> si cobras 14 pagas y no van prorrateadas, se devengan 2 sueldos extras a lo largo del año (art. 31 ET).</li>
+      </ul>
+      <div class="example">
+        <strong>Ejemplo.</strong> 1.500 €/mes, 14 pagas, 10 días del mes, 5 días de vacaciones y 4 meses de extras generados: 500 € de salario + 250 € de vacaciones + 1.000 € de extras = <strong>1.750 € brutos</strong>. Sobre esa cantidad la empresa puede retener IRPF y Seguridad Social.
+      </div>
+      <p>El SMI 2026 es 1.221 €/mes en 14 pagas (17.094 €/año, RD 126/2026). Si tu bruto está por debajo, revisa la nómina: el mínimo es de obligado cumplimiento.</p>
+    </section>
+
+    <section class="section faq" id="faq">
+      <h2>Preguntas frecuentes</h2>
+      <details open>
+        <summary>¿Hay indemnización si pido la baja voluntaria?</summary>
+        <p>No. Solo cobras lo ya trabajado y no pagado. Si te despiden por causas objetivas, usa la <a href="/calculadora-indemnizacion-despido-objetivo-2026/">calculadora de despido objetivo</a>.</p>
+      </details>
+      <details>
+        <summary>¿Qué entra en el finiquito de una baja voluntaria?</summary>
+        <p>Salario de los días del mes, vacaciones generadas y no cogidas, y pagas extras no prorrateadas. Los bonus o pluses consolidados también cuentan si los tienes reconocidos.</p>
+      </details>
+      <details>
+        <summary>¿Tengo que preavisar?</summary>
+        <p>El convenio o el contrato suelen pedir 15 días. Si no preavisas, la empresa puede descontar esos días del finiquito. Esta calculadora no aplica ese descuento: mételo a mano si te lo reclaman.</p>
+      </details>
+      <details>
+        <summary>¿El finiquito tributa?</summary>
+        <p>Sí, como rendimiento del trabajo. La indemnización legal por despido (que aquí es 0 €) está exenta hasta el límite legal, con un tope de 180.000 €.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>Estimación orientativa. Contrasta el documento de liquidación antes de firmar.</div>
+      <div>
+        <a href="/aviso-legal.html">Aviso legal</a> ·
+        <a href="/privacidad.html">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/calc.js"></script>
+  <script src="/js/ui.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("form");
+      var out = document.getElementById("out");
+      function run() {
+        var extrasBox = document.getElementById("extrasInMonthly");
+        var data = C.finiquitoBajaVoluntaria({
+          monthly: document.getElementById("monthly").value,
+          pagas: document.getElementById("pagas").value,
+          start: document.getElementById("start").value,
+          end: document.getElementById("end").value,
+          daysWorked: document.getElementById("daysWorked").value,
+          unusedVacation: document.getElementById("unusedVacation").value,
+          monthsExtras: document.getElementById("monthsExtras").value,
+          extrasInMonthly: extrasBox.checked || Number(document.getElementById("pagas").value) === 12
+        });
+        if (data.error) return renderError(out, data.error);
+        out.innerHTML =
+          '<p class="kicker">Finiquito bruto estimado</p>' +
+          '<p class="total">' + C.euros(data.total) + '</p>' +
+          '<p class="muted">Sin indemnización (baja voluntaria). Cifra antes de IRPF y Seguridad Social.</p>' +
+          '<ul class="breakdown">' +
+          '<li><span>Salario pendiente (' + data.daysWorked + ' días)</span><span>' + C.euros(data.salarioPendiente) + '</span></li>' +
+          '<li><span>Vacaciones (' + C.num(data.vacationDays, 1) + ' días)</span><span>' + C.euros(data.vacaciones) + '</span></li>' +
+          '<li><span>Pagas extras devengadas</span><span>' + C.euros(data.pagasExtra) + '</span></li>' +
+          '<li class="strong"><span>Total bruto</span><span>' + C.euros(data.total) + '</span></li>' +
+          '</ul>' +
+          '<p class="note">Salario día usado para otros cálculos: ' + C.euros(data.daily) + ' (bruto anual / 365).</p>';
+      }
+      bindForm(form, run);
+      run();
+    })();
+  </script>
+</body>
+</html>
