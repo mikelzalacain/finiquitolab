@@ -1,32 +1,25 @@
 # Publicar FiniquitoLab
 
-El sitio está preparado para **https://finiquitolab.es**. Si compraste otro nombre, dímelo y se cambian canónicas y sitemap.
+El sitio está preparado para **https://finiquitolab.es**.
 
-## 1. Subir la web (Cloudflare Pages, gratis)
+## Qué puedo hacer yo y qué no
 
-1. Entra en [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Upload assets**.
-2. Sube **toda la carpeta** del proyecto (los HTML, `css/`, `js/`, `img/`, `sitemap.xml`, `robots.txt`).
-3. Cuando termine, tendrás una URL tipo `https://algo.pages.dev`. Ábrela y comprueba que las calculadoras funcionan.
+No envíes la **contraseña** de Cloudflare, DonDominio ni Gmail por el chat.
 
-## 2. Enganchar el dominio
+| Tarea | ¿Lo puedo hacer yo? |
+|---|---|
+| Subir los archivos a Cloudflare Pages | Sí, con un **token de API** (no la clave de la cuenta) |
+| Cambiar nameservers en DonDominio | No: hace falta tu login del registrador |
+| Verificar Search Console | No: hace falta tu Google |
+| Comprar o transferir el dominio | No |
 
-1. En el proyecto de Pages → **Custom domains** → añade `finiquitolab.es` y `www.finiquitolab.es`.
-2. Cloudflare te dirá qué hacer:
+Para que suba la web: en Cloudflare, **My Profile → API Tokens → Create Token**, permisos de Pages. Account ID: en el panel, columna derecha. Pásalos como secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`.
 
-**Si el dominio está en DonDominio (u otro) y quieres DNS en Cloudflare (recomendado):**
+## Si lo publicas tú (10 minutos)
 
-1. En Cloudflare, **Add a site** → `finiquitolab.es` (plan Free).
-2. Cloudflare te da dos nameservers (`xxx.ns.cloudflare.com`).
-3. En DonDominio → el dominio → DNS / nameservers → pega esos dos.
-4. Espera de 15 minutos a unas horas. Luego en Pages el dominio queda en **Active** y HTTPS se genera solo.
+1. [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Upload assets**.
+2. Sube la carpeta del proyecto.
+3. **Custom domains** → `finiquitolab.es`.
+4. Si el `.es` está en DonDominio: en Cloudflare **Add a site**, copia los 2 nameservers y pégalos en DonDominio.
+5. [Search Console](https://search.google.com/search-console): propiedad de dominio + sitemap `https://finiquitolab.es/sitemap.xml`.
 
-No hace falta comprar el dominio otra vez en Cloudflare.
-
-## 3. Google
-
-1. [Search Console](https://search.google.com/search-console) → añadir propiedad **Dominio**: `finiquitolab.es`.
-2. Verificación: copia el registro TXT que te da Google en Cloudflare DNS.
-3. Enviar sitemap: `https://finiquitolab.es/sitemap.xml`.
-4. A los pocos días: `site:finiquitolab.es` en Google.
-
-Hasta que esto no esté en internet, no hay visitas.
