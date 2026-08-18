@@ -4,7 +4,7 @@ Calculadoras laborales para España (2026): finiquito, despidos, paro, sueldo ne
 
 - Repositorio: **https://github.com/mikelzalacain/finiquitolab**
 - Vista previa: **https://mikelzalacain.github.io/finiquitolab/**
-- Dominio previsto: **https://finiquitolab.es**
+- Dominio previsto: **https://mifiniquitolab.es**
 
 En Cursor del PC: **Clone repo** → pega `https://github.com/mikelzalacain/finiquitolab.git`
 

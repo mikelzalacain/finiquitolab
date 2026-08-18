@@ -51,7 +51,7 @@ function page(p) {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: p.title,
-    url: "https://finiquitolab.es" + p.path,
+    url: "https://mifiniquitolab.es" + p.path,
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
@@ -64,11 +64,11 @@ function page(p) {
   <script>(function(){if(location.hostname==="mikelzalacain.github.io")document.write('<base href="/finiquitolab/">');})();</script>
   <title>${p.title}</title>
   <meta name="description" content="${p.description}">
-  <link rel="canonical" href="https://finiquitolab.es${p.path}">
+  <link rel="canonical" href="https://mifiniquitolab.es${p.path}">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="${p.h1}">
   <meta property="og:description" content="${p.description}">
-  <meta property="og:url" content="https://finiquitolab.es${p.path}">
+  <meta property="og:url" content="https://mifiniquitolab.es${p.path}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">

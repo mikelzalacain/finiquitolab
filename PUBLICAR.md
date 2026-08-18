@@ -1,6 +1,6 @@
 # Publicar FiniquitoLab
 
-El sitio está preparado para **https://finiquitolab.es**.
+El sitio está preparado para **https://mifiniquitolab.es**.
 
 ## Qué puedo hacer yo y qué no
 
@@ -19,7 +19,7 @@ Para que suba la web: en Cloudflare, **My Profile → API Tokens → Create Toke
 
 1. [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Upload assets**.
 2. Sube la carpeta del proyecto.
-3. **Custom domains** → `finiquitolab.es`.
+3. **Custom domains** → `mifiniquitolab.es`.
 4. Si el `.es` está en DonDominio: en Cloudflare **Add a site**, copia los 2 nameservers y pégalos en DonDominio.
-5. [Search Console](https://search.google.com/search-console): propiedad de dominio + sitemap `https://finiquitolab.es/sitemap.xml`.
+5. [Search Console](https://search.google.com/search-console): propiedad de dominio + sitemap `https://mifiniquitolab.es/sitemap.xml`.
 
