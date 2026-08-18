@@ -3,14 +3,69 @@ const path = require("path");
 
 const ORIGIN = "https://www.mifiniquitolab.es";
 
-const NAV = `
-      <nav>
-        <a href="/">Todas</a>
+const FONTS = `
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">`;
+
+function headerHtml() {
+  return `<a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">FL</span> FiniquitoLab</a>
+      <nav aria-label="Principal">
         <a href="/calculadora-finiquito-2026/">Finiquito</a>
         <a href="/calculadora-sueldo-neto-2026/">Sueldo neto</a>
         <a href="/calculadora-paro-2026/">Paro</a>
         <a href="/calculadora-cuota-autonomos-2026/">Autónomos</a>
-      </nav>`;
+        <a href="/criterios/">Criterios</a>
+      </nav>
+      <a class="header-cta" href="/calculadora-finiquito-2026/">Calcular</a>
+    </div>
+  </header>`;
+}
+
+function footerHtml() {
+  return `<footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/"><span class="brand-mark">FL</span> FiniquitoLab</a>
+          <p>Calculadoras laborales para España, actualizadas a 2026. El cálculo se hace en tu navegador.</p>
+        </div>
+        <div>
+          <h3>Herramientas</h3>
+          <ul>
+            <li><a href="/calculadora-finiquito-2026/">Finiquito</a></li>
+            <li><a href="/calculadora-sueldo-neto-2026/">Sueldo neto</a></li>
+            <li><a href="/calculadora-paro-2026/">Paro SEPE</a></li>
+            <li><a href="/calculadora-cuota-autonomos-2026/">Autónomos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Despido</h3>
+          <ul>
+            <li><a href="/calculadora-indemnizacion-despido-objetivo-2026/">Objetivo 20 días</a></li>
+            <li><a href="/calculadora-indemnizacion-despido-improcedente-2026/">Improcedente 33 días</a></li>
+            <li><a href="/comparativa-despido-objetivo-improcedente/">Comparar 20 vs 33</a></li>
+            <li><a href="/calculadora-fin-contrato-temporal-2026/">Contrato temporal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Sitio</h3>
+          <ul>
+            <li><a href="/criterios/">Cómo calculamos</a></li>
+            <li><a href="/aviso-legal.html">Aviso legal</a></li>
+            <li><a href="/privacidad.html">Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-note">Estimación orientativa con el Estatuto de los Trabajadores y criterios habituales del Tribunal Supremo (prorrateo por meses). No sustituye al SEPE, Hacienda, un convenio ni a un laboralista. © 2026 FiniquitoLab.</p>
+    </div>
+  </footer>`;
+}
+
+const NAV = "";
 
 function related(current) {
   const all = [
@@ -29,9 +84,9 @@ function related(current) {
   ];
   const items = all
     .filter(([href]) => href !== current)
-    .map(([href, t]) => `<li><a href="${href}">${t}</a></li>`)
+    .map(([href, t]) => `<a class="card tool-card" href="${href}"><h3>${t}</h3><p>Abrir herramienta</p></a>`)
     .join("");
-  return `<section class="section prose"><h2>Otras calculadoras</h2><ul>${items}</ul></section>`;
+  return `<section class="section"><h2>Otras calculadoras</h2><div class="cards">${items}</div></section>`;
 }
 
 function page(p) {
@@ -64,13 +119,14 @@ function page(p) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>(function(){if(location.hostname==="mikelzalacain.github.io")document.write('<base href="/finiquitolab/">');})();</script>
+  ${FONTS}
   <title>${p.title}</title>
   <meta name="description" content="${p.description}">
   <link rel="canonical" href="${ORIGIN}${p.path}">
   <link rel="alternate" hreflang="es-ES" href="${ORIGIN}${p.path}">
   <link rel="alternate" hreflang="x-default" href="${ORIGIN}${p.path}">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#f4efe6">
+  <meta name="theme-color" content="#0e4b5c">
   <meta property="og:title" content="${p.h1}">
   <meta property="og:description" content="${p.description}">
   <meta property="og:url" content="${ORIGIN}${p.path}">
@@ -98,13 +154,8 @@ function page(p) {
   })}</script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/"><span class="brand-mark">FL</span> FiniquitoLab</a>
-      ${NAV}
-    </div>
-  </header>
-  <main class="wrap">
+  ${headerHtml()}
+  <main class="wrap" id="contenido">
     <section class="hero">
       <nav class="crumbs" aria-label="Migas de pan"><a href="/">Inicio</a><span aria-hidden="true"> / </span><span>${p.h1}</span></nav>
       <p class="kicker">${p.kicker}</p>
@@ -115,7 +166,7 @@ function page(p) {
       <form class="card calc" id="form">${p.form}
         <button class="btn" type="submit">${p.button || "Calcular"}</button>
       </form>
-      <div class="card result" id="out" aria-live="polite"></div>
+      <div class="card result" id="out" aria-live="polite"><p class="muted">Introduce los datos y pulsa calcular. El resultado aparece aquí, sin enviar nada a un servidor.</p></div>
     </section>
     <section class="section prose">${p.body}</section>
     <section class="section faq"><h2>Preguntas frecuentes</h2>
@@ -123,12 +174,7 @@ function page(p) {
     </section>
     ${related(p.path)}
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <div>Estimación orientativa. No sustituye al SEPE, Hacienda ni a un laboralista.</div>
-      <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
-    </div>
-  </footer>
+  ${footerHtml()}
   <script src="/js/calc.js"></script>
   <script src="/js/ui.js"></script>
   <script>
@@ -212,9 +258,12 @@ const pages = [
             <option value="temporal">Fin de contrato temporal (12 días/año)</option>
           </select></div>`
     ),
-    body: `<h2>Qué incluye un finiquito</h2>
-      <p>El finiquito liquida lo ya generado: salario del mes, vacaciones no disfrutadas y pagas extras. La indemnización es aparte y solo entra en despido o fin de temporal.</p>
-      <div class="example"><strong>Atajo.</strong> Si te vas tú, usa también la <a href="/calculadora-finiquito-baja-voluntaria-2026/">página de baja voluntaria</a>. Si te despiden, compara con la <a href="/comparativa-despido-objetivo-improcedente/">tabla 20 vs 33 días</a>.</div>`,
+    body: `<h2>Qué incluye un finiquito en España</h2>
+      <p>El finiquito (o liquidación) cierra lo ya generado al terminar el contrato: salario de los días del mes, vacaciones no disfrutadas y la parte proporcional de pagas extras si no van prorrateadas. La indemnización es un concepto distinto: solo entra en despido o en el fin de un contrato temporal.</p>
+      <p>Esta calculadora aplica el Estatuto de los Trabajadores (arts. 31, 38, 49, 53 y 56) y el prorrateo de antigüedad <strong>por meses</strong> que usa de forma habitual el Tribunal Supremo: los días sueltos cuentan como un mes completo.</p>
+      <h2>Cómo usarla</h2>
+      <p>Elige el tipo de cese, el sueldo bruto, las pagas y las fechas de alta y baja. El resultado es bruto y orientativo. Convenio, pluses o un pacto de empresa pueden cambiar la cifra. Si no cuadra con el documento que te dan, firma «recibí no conforme» y consulta a un laboralista.</p>
+      <div class="example"><strong>Atajo.</strong> Baja voluntaria: <a href="/calculadora-finiquito-baja-voluntaria-2026/">página específica</a>. Despido: compara <a href="/comparativa-despido-objetivo-improcedente/">20 vs 33 días</a>. Criterios: <a href="/criterios/">cómo calculamos</a>.</div>`,
     faq: [
       { q: "¿Finiquito e indemnización son lo mismo?", a: "No. El finiquito se paga siempre. La indemnización solo en algunos ceses." },
       { q: "¿El finiquito tributa?", a: "El salarial sí. La indemnización legal por despido está exenta hasta el límite y 180.000 €." },
