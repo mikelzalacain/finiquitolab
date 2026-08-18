@@ -1,0 +1,15 @@
+# FiniquitoLab
+
+Calculadoras laborales para España (2026). Sitio: https://www.mifiniquitolab.es/
+
+## Herramientas
+- https://www.mifiniquitolab.es/calculadora-finiquito-2026/
+- https://www.mifiniquitolab.es/calculadora-sueldo-neto-2026/
+- https://www.mifiniquitolab.es/calculadora-paro-2026/
+- https://www.mifiniquitolab.es/calculadora-cuota-autonomos-2026/
+
+## Guías
+- https://www.mifiniquitolab.es/guia-calcular-finiquito-2026/
+- https://www.mifiniquitolab.es/guia-indemnizacion-despido-2026/
+- https://www.mifiniquitolab.es/guia-prestacion-desempleo-2026/
+- https://www.mifiniquitolab.es/criterios/
